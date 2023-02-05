@@ -12,11 +12,13 @@
     color: white;
     border-radius: 8px;
     margin-left: 210px;
+    /* margin-top: 40px; */
+    margin-top: -20px;
 }
 
 .login-container {
     width: 600px;
-    height: 550px;
+    height: 450px;
     border-color: darkblue !important;
     border: 2px solid;
 }

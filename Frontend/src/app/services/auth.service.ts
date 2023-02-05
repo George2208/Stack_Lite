@@ -16,5 +16,25 @@ export class AuthService {
     return this.http.get<any>(`${this.host}/data`);
   }
 
+  public register(user: any): Observable<any> {
+    return this.http.post<any>(`${this.host}/register`, user);
+  }
+
+  public login(user: any): Observable<any> {
+    return this.http.post<any>(`${this.host}/login`, user);
+  }
+
+  public addUserToLocalCache(user: any): void {
+    localStorage.setItem('user', JSON.stringify(user));
+  }
+
+  public getUserFromLocalCache(): any {
+    return JSON.parse(localStorage.getItem('user')|| '{}');
+  }
+
+  public logout(): void {
+    localStorage.removeItem('user');
+  }
+
  
 }

@@ -1,2 +1,22 @@
-<router-outlet>
-</router-outlet>
+<nav class="flex justify-between p-4 bg-purple-900 text-white">
+    <div>
+        <a routerLink="/" style="font-family: 'Courier New', Courier, monospace;">StackLite</a>
+    </div>
+    <div>
+        <div *ngIf="isLoggedIn === false">
+            <ng-container>
+                <a class="mx-4" routerLink="/login"> Login</a>
+                <a class="mx-4" routerLink="/register"> Register</a>
+            </ng-container>
+        </div>
+        <div *ngIf="isLoggedIn === true">
+            <ng-container>
+                <a class="mx-4" routerLink="/profile">Profile</a>
+                <button (click)="logout()" class="mx-4">Logout</button>
+            </ng-container>
+        </div>
+    </div>
+</nav>
+<div class="p-4">
+    <router-outlet></router-outlet>
+</div>
