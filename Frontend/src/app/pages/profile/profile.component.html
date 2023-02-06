@@ -1,1 +1,17 @@
-<p>profile works!</p>
+<div class="login-container">
+    <p class="text">Hello, {{username}}!</p>
+    <p class="text">What is your question?</p>
+    <form [formGroup]="questionForm">
+        <div class="text my-5 w-full">
+            <label for="title">Title</label>
+            <input type="email" id="email" class="p-2 rounded w-full border text-sm" placeholder="Title"
+                formControlName="title">
+        </div>
+        <div class="text my-5 w-full">
+            <div>Content</div>
+            <textarea formControlName="content"></textarea>
+        </div>
+
+        <button class="submit-button"> Submit </button>
+    </form>
+</div>

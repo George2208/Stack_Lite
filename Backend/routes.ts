@@ -39,14 +39,15 @@ export namespace PostRoutes {
             username: data.username,
             password: data.password
         }))
-        return `Registered as ${data.username}`
+        return {message: `Registered as ${data.username}`}
     }
     export async function login(data: {username: string, password: string}) {
-        if(await User.findOne({where: {username: data.username, password: data.password}}) === null)
+        const user = await User.findOne({where: {username: data.username, password: data.password}})
+        if(user === null)
             return false
-        return true
+        return user
     }
-    export async function createQuestion(data: {username: string, password: string, title: string, content: string}) {
+    export async function createQuestion(data: {password:string, username: string, title: string, content: string}) {
         const user = await getAccount(data.username, data.password)
         const question = await Question.create({
             userID: user.userID,

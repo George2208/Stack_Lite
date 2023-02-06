@@ -31,8 +31,9 @@ export class LoginComponent implements OnInit {
     this.authService.addUserToLocalCache(this.loginForm.value)
     Swal.fire('Thank you...', 'You submitted succesfully!', 'success').then(result=>{
       this.router.navigate(['/profile'])
-      window.location.reload()
+      // window.location.reload()
     })
+    window.location.reload()
   }
 
 

@@ -38,7 +38,7 @@ export class RegisterComponent implements OnInit {
     this.authService.addUserToLocalCache(this.registerForm.value)
     Swal.fire('Thank you...', 'You submitted succesfully!', 'success').then(result=>{
       this.router.navigate(['/profile'])
-      window.location.reload()
+      // window.location.reload()
     })
 
   }

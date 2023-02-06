@@ -1,0 +1,32 @@
+.login-container {
+    width: 700px;
+    height: 650px;
+    border-color: darkblue !important;
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.text {
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+ 
+}
+
+.submit-button { 
+    width: 150px;
+    height: 50px;
+    background-color: darkblue;
+    color: white;
+    border-radius: 8px;
+    /* margin-top: 40px; */
+    margin-top: -20px;
+}
+
+textarea {
+    border-color: black !important;
+    border-radius: 8px;
+    border: 1px solid;
+    width: 655px;
+    height: 200px;
+}

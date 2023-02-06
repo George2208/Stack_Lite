@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from './services/auth.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class AppComponent {
   isLoggedIn: boolean;
   JSON: any;
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthService,
+    private router: Router) {
     this.user = this.authService.getUserFromLocalCache()
     if(this.user.username) {
       this.isLoggedIn = true;
@@ -29,5 +31,6 @@ export class AppComponent {
     console.log(1)
     this.isLoggedIn = false;
     this.authService.logout();
+    this.router.navigate(['/login'])
   }
 }
