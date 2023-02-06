@@ -29,6 +29,10 @@ export namespace GetRoutes {
     export async function questions() {
         return await Question.findAll({raw: true})
     }
+
+    export async function users() {
+        return await User.findAll({raw: true})
+    }
 }
 
 export namespace PostRoutes {
@@ -71,6 +75,10 @@ export namespace PostRoutes {
         })
         print(answer)
         return answer.dataValues
+    }
+
+    export async function getUserById(data : {userID: number}) {
+        return User.findOne({where : {userID : data.userID}})
     }
 }
 
