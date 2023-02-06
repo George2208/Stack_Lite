@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/profile'])
       // window.location.reload()
     })
-    window.location.reload()
+    // window.location.reload()
   }
 
 

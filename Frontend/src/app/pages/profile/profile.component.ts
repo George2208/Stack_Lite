@@ -1,4 +1,3 @@
-import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -22,8 +21,7 @@ export class ProfileComponent {
   constructor(private authService: AuthService,
     private fb: FormBuilder,
     private questionService: QuestionService,
-    private router: Router,
-    private datePipe: DatePipe) {
+    private router: Router) {
     
   }
 
@@ -31,7 +29,6 @@ export class ProfileComponent {
     this.user = this.authService.getUserFromLocalCache()
     this.username = this.user.username
     this.password = this.user.password
-    let today = new Date();
     this.questionForm = this.fb.group({
       password: this.password,
       username: this.username,
