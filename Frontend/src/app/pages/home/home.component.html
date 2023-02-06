@@ -1,1 +1,22 @@
-<p>home works!</p>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<section id="about-section" class="pt-5 pb-5" *ngFor="let question of questions">
+    <div class="container wrapabout">
+        <div class="red"></div>
+        <div class="row">
+            <div class="col-lg-6 align-items-center justify-content-left d-flex mb-5 mb-lg-0">
+                <div class="blockabout">
+                    <div class="blockabout-inner text-center text-sm-start">
+                        <div class="title-big pb-3 mb-3">
+                            <h3>{{question.title}}</h3>
+                        </div>
+                        <p class="description-p text-muted pe-0 pe-lg-0">
+                            {{question.content}}
+                        </p>
+                        <h3>{{question.date}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
