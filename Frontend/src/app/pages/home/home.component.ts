@@ -36,4 +36,8 @@ export class HomeComponent {
     this.username = this.user.username
 
   }
+
+  goToPage(questionID : number): void {
+    this.router.navigate(["/question/" + String(questionID)])
+  }
 }

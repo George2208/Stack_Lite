@@ -1,0 +1,32 @@
+<section class="stacklite articleSection events">
+    <div class="row">
+        <div class="col">
+            <h1 class="title">{{question.title}}</h1>
+            <h4>{{question.content}}</h4>
+            <h6>The date of publishing: {{question.date}}</h6>
+        </div>
+    </div>
+</section>
+
+<div class="login-container">
+    <p class="text">Write an answer</p>
+    <form [formGroup]="answerForm">
+        <div class="text my-5 w-full">
+            <div>Content</div>
+            <textarea formControlName="content"></textarea>
+        </div>
+        <button (click)="submitAnswer()" class="submit-button"> Submit </button>
+    </form>
+</div>
+
+<h1> Answers: </h1>
+
+<section class="stacklite articleSection events" *ngFor="let answer of answers">
+    <div class="row">
+        <div class="col">
+            <!-- <h4 ()="findUser(answer.userID)">User: {{users.username}}</h4> -->
+            <h4>User: </h4>
+            <h4>{{answer.content}}</h4>
+        </div>
+    </div>
+</section>

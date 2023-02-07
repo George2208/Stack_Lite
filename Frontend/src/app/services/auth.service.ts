@@ -24,6 +24,14 @@ export class AuthService {
     return this.http.get<any>(`${this.host}/users`);
   }
 
+  public getQuestionById(questionID: Number): Observable<any> {
+    return this.http.post<any>(`${this.host}/getQuestionById`, {questionID : questionID});
+  }
+
+  public getUserById(userID: Number): Observable<any> {
+    return this.http.post<any>(`${this.host}/getUserById`, {userID : userID});
+  }
+
   public register(user: any): Observable<any> {
     return this.http.post<any>(`${this.host}/register`, user);
   }
