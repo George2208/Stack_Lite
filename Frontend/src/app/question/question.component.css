@@ -5,6 +5,7 @@
 }
 
 .title {
+    margin-top: 1vh;
     text-align: center;
     color: darkblue !important;
     font-size: 10vmin;

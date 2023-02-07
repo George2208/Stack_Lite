@@ -88,6 +88,10 @@ export namespace PostRoutes {
     export async function getQuestionById(data : {questionID: number}) {
         return await Question.findOne({where : {questionID : data.questionID}})
     }
+
+    export async function getAnswersByQuestionId(data : {questionID: number}) {
+        return await Answer.findAll({where : {questionID : data.questionID}})
+    }
 }
 
 export namespace DeleteRoutes {

@@ -50,3 +50,12 @@ h6 {
     border-radius: 8px;
     margin-top: 5vh;
 }
+
+
+.text {
+    margin-top: 5vh;
+    margin-bottom: -5vh;
+    margin-left: 9%;
+    font-size: 6vmin;
+    color: black;
+}

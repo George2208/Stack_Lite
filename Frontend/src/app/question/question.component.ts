@@ -57,6 +57,11 @@ export class QuestionComponent {
       this.answers = data;
       console.log(data)
     })
+
+    this.answerService.getAnswersByQuestionId(this.questionID).subscribe(data => {
+      this.answers = data;
+      console.log(data)
+    })
   }
 
   submitAnswer() {

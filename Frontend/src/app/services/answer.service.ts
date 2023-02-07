@@ -13,7 +13,11 @@ export class AnswerService {
 
     public getAnswers(): Observable<any> {
         return this.http.get<any>(`${this.host}/answers`);
-      }
+    }
+
+    public getAnswersByQuestionId(data: any) {
+        return this.http.post<any>(`${this.host}/getAnswersByQuestionId`, data);
+    }
 
     public addAnswer(data: any) {
       return this.http.post<any>(`${this.host}/createAnswer`, data);
